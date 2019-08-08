@@ -1,18 +1,38 @@
 import React from 'react';
 
+import styled from 'styled-components';
+
+const StyledCounter = styled.div`
+    height: 200px;
+    width: 400px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+`;
+
 export default function Dashboard (props) {
     const { strikeSetter, strikes, ballSetter, balls } = props;
 
     const strikeHandler = () => {
-        strikes === 3 ? () => strikeSetter(0) : () => strikeSetter(strikes + 1);
+        if (strikes === 2) 
+        {strikeSetter(0);} 
+        else 
+        {strikeSetter(strikes + 1);};
     }
 
     const ballHandler = () => {
-        balls === 4 ? () => ballSetter(0) : () => ballSetter(balls + 1);
+        if (balls === 3) 
+        {ballSetter(0);} 
+        else 
+        {ballSetter(balls + 1);};
     }
 
     const foulHandler = () => {
-        strikes === 2 ? () => strikeSetter(2) : () => strikeSetter(strikes + 1);
+        if (strikes === 2) 
+        {strikeSetter(2);} 
+        else 
+        {strikeSetter(strikes + 1);};
     }
 
     const hitHandler = () => {
@@ -21,11 +41,11 @@ export default function Dashboard (props) {
     }
 
     return (
-        <div className="dashboard-container">
+        <StyledCounter>
             <button className="Strike" onClick={strikeHandler}>Strike</button>
             <button className="Ball" onClick={ballHandler}>Ball</button>
             <button className="Foul" onClick={foulHandler}>Foul</button>
             <button className="Hit" onClick={hitHandler}>Hit</button>
-        </div>
+        </StyledCounter>
     )
 }
