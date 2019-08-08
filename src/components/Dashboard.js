@@ -7,8 +7,17 @@ const StyledCounter = styled.div`
     width: 400px;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+
+    button {
+        display: flex;
+        padding: 15px 20px 15px 20px;
+        background: whitesmoke;
+        border: 3px solid darkgrey;
+        border-radius: 10px;
+        color: black;
+    }
 `;
 
 export default function Dashboard (props) {

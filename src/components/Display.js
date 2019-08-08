@@ -9,6 +9,9 @@ const StyledCounter = styled.div`
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
+    background: whitesmoke;
+    border: 5px solid darkgrey;
+    border-radius: 15px;
     
     span {
         font-size: 4rem;

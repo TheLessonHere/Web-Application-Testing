@@ -15,7 +15,7 @@ const StyledCounter = styled.div`
     margin: 0 auto;
     margin-top: 20px;
     background: green;
-    color: whitesmoke;
+    color: black;
     border: 5px solid darkgrey;
     border-radius: 15px;
 `;
